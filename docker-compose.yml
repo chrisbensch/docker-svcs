@@ -1,0 +1,13 @@
+---
+
+services:
+  tor-services:
+    image: chrisbensch/docker-svcs:latest
+    container_name: tor-svcs
+    ports:
+      - "9050:9050"
+      - "9051:9051"
+    volumes:
+      - ./torrc:/etc/tor/torrc
+      - ./appdata/var/lib/tor:/var/lib/tor
+    restart: always
