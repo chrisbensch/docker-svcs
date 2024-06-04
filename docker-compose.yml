@@ -1,12 +1,9 @@
 ---
-
 services:
   tor-services:
     image: chrisbensch/docker-svcs:latest
     container_name: tor-svcs
-    ports:
-      - "9050:9050"
-      - "9051:9051"
+    network_mode: host
     volumes:
       - ./torrc:/etc/tor/torrc:ro
       - ./appdata/var/lib/tor:/var/lib/tor
