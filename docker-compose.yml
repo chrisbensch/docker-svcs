@@ -8,6 +8,6 @@ services:
       - "9050:9050"
       - "9051:9051"
     volumes:
-      - ./torrc:/etc/tor/torrc
+      - ./torrc:/etc/tor/torrc:ro
       - ./appdata/var/lib/tor:/var/lib/tor
     restart: always
