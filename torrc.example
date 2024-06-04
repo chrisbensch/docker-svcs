@@ -1,0 +1,14 @@
+# torrc configuration for Tor
+
+# Set the port for the SOCKS proxy
+SocksPort 0.0.0.0:9050
+
+# Control port
+ControlPort 9051
+
+# DataDirectory
+DataDirectory /var/lib/tor
+
+# Hidden services
+HiddenServiceDir /var/lib/tor/hidden_service
+HiddenServicePort 80 127.0.0.1:80
